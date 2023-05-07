@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+  .listingContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .listingContent p{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 10px;
+    width: 40%;
+    padding-left: 50px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .listinInfoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:center;
+    margin: 20px;
+    flex-direction: row;
+    width: 45%;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .leftContainer {
+    width: 35%;
+    background-color: #facaca;
+    height: 100%;
+    border: 1px solid black;
+  }
+
+  .rightContainer {
+    border: 1px solid black;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .data {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .data select,
+  .data textarea {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #444;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .data textarea {
+    border: 1px solid #000000;
+  }
+
+  .data input[type="text"]{
+    font-size: 16px;
+    width: 94%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+
+  .data input[id="price"] {
+    border-radius: 0px;
+    border: none;
+  }
+
+  .priceContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .euroSign {
+    color: #000000;
+    font-size: x-large;
+    background-color: #ffffff;
+    width: 10%;
+    border: 1px solid white;
+  }
+  
+  .data select:focus,
+  .data input[type="text"]:focus,
+  .data textarea:focus {
+    outline: none;
+    border-color: #fc545cfa;
+    box-shadow: 0px 0px 4px rgba(91, 143, 249, 0.4);
+  }
+
+  .data select{
+    cursor: pointer;
+  }
+
+  .data select[id="selling-buying"]:focus{
+    transform: translateY(-10px);
+  }
+
+ .button {
+    cursor: pointer;
+  }
+
+  .data [id="description"] {
+    width: 300px;
+    height: 200px;
+    resize: none;
+  }
+
+  .rightContainer .button {
+    display: block;
+  }
+
+  .imageInfoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .fileUpload input[type="file"] {
+    display: none;
+  }
+  
+  .fileUpload {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: #e8b4b8;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    width: 70%;
+    text-align: center;
+    border: 1px solid black;
+  }
+  
+  .fileUpload:hover {
+    background-color: #f19204;
+  }
+  
+  .fileUploadLabel {
+    font-size: 16px;
+  }
+  
+  .imagePreview {
+    display: none;
+    width: 100%;
+  }
+  
+  .imagePreview img {
+    display: none;
+  }
+
+  .rightContainer button {
+    cursor: pointer;
+    background-color: #67595e;
+    border-radius: 4px;
+    font-size: 15px;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 7px 11px;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    border: none;
+  }
+
+  .rightContainer button:hover {
+    background-color: #e8b4b8;
+  }
+
+  .rightContainer .lowerButtonContainer {
+    width: 70%;
+    margin-top: 38%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .rightContainer .loadingPromptContainer {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    width: 400px;
+    height: 60px;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background-color: #e7e7e7;
+    color: #000000;
+    padding: 10px;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .rightContainer .prompt {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

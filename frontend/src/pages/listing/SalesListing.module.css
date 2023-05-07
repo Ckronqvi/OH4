@@ -1,0 +1,95 @@
+
+.linkToHome {
+  margin-left: 30%;
+}
+
+.linkToHome:hover {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+
+.content {
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 900px;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+margin-top: 10px;
+max-height: calc(100vh - 120px); /* set max-height equal to the viewport height minus the height of the navbar and the linkToHome element */
+  overflow-y: scroll;
+}
+
+p2 {
+    font-weight: bold;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 40%; 
+    border: 1px solid black;
+    background-color: #ffeaf3;
+  }
+  
+  .imageContainer img {
+    max-width: 99%;
+    max-height: 99%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    width: 40%; 
+    height: 300px;
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-top: 0;
+  }
+  
+    .namePriceContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #e8b4b8;
+    border: 2px solid black;
+    justify-content: center;
+  }
+
+  .itemName {
+    background-color: #e8b4b8;
+    width: 80%;
+    text-align: left;
+    border-right: 2px solid black;
+    padding-left: 10px;;
+  }
+
+  .itemPrice{
+    background-color: #e8b4b8;
+    width: 20%;
+    text-align: center;
+    padding-right: 10px;;
+  }
+  
+  .itemInformation {
+    text-align: left;
+    background-color: #ffeaf3 ;
+    width: 98%;
+    padding: 1%;
+    border: 2px solid black;
+  }
+  
+  .sellerInfo {
+    text-align: right;
+    background-color: #e8b4b8;
+    width: 95%;
+    padding-right: 5%;
+    border: 2px solid black;
+  }

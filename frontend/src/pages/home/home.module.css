@@ -1,0 +1,51 @@
+ 
+ .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar {
+    flex: 0 0 auto;
+  }
+  
+  .content {
+    flex: 1 1 auto;
+    display: flex;
+    overflow: auto;
+  }
+
+  .leftColumn {
+    margin-top: 15px;
+  }
+  
+  .rightColumn {
+    margin-left: 150px;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .scrollableGrid {
+    max-height: 80vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #00db54 #fac3c3;
+    scroll-behavior: smooth;
+    direction: ltr;
+  }
+  
+  .scrollableGrid::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  .scrollableGrid::-webkit-scrollbar-thumb {
+    background-color: #00db54;
+    border-radius: 1rem;
+  }
+  
+  .scrollableGrid::-webkit-scrollbar-track {
+    background-color: #fac3c3;
+    border-radius: 1rem;
+  }
