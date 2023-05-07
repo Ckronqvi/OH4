@@ -6,6 +6,7 @@ import com.oh4.demo.entities.SalesListing;
 import com.oh4.demo.entities.User;
 import com.oh4.demo.repositories.SalesListingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -26,16 +27,24 @@ public class SalesListingService {
   private final UserDTOMapper userDTOMapper;
   private final SalesListingRepository salesListingRepository;
   private final ResourceLoader resourceLoader;
-  private static final String FOLDERNAME = "/var/images/";
+  private static String FOLDERNAME = "/var/images/"; //PLACE TO STORE THE IMAGES
   @Autowired
   public SalesListingService(SalesListingRepository salesListingRepository,
-                             ChatMessageService chatMessageService, JwtService jwtService, UserService userService, UserDTOMapper userDTOMapper, ResourceLoader resourceLoader) {
+                             ChatMessageService chatMessageService,
+                            JwtService jwtService, 
+                            UserService userService, 
+                            UserDTOMapper userDTOMapper, 
+                            ResourceLoader resourceLoader,
+                            @Value("${image.folder}") String folderName) {
     this.salesListingRepository = salesListingRepository;
     this.chatMessageService = chatMessageService;
     this.jwtService = jwtService;
     this.userService = userService;
     this.userDTOMapper = userDTOMapper;
     this.resourceLoader = resourceLoader;
+    if(null != folderName) {
+      FOLDERNAME = folderName;
+    }
   }
 
   public List<SalesListing> getListings() {
