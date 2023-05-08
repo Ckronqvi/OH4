@@ -1,5 +1,10 @@
 # OH4
-Ohjelmointi 4 kurssin kamaa
+Reactilla ja Springillä tehty verkkokauppa.
+
+## Ominaisuudet:
+* Käyttäjätilin luominen
+* Sisäänkirjautuminen ja JWT session hallinta
+* Ilmoituksien selaaminenen ja lisääminen
 
 ## Mitä tarvitset:
 * JDK 17+
