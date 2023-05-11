@@ -209,8 +209,9 @@ const AddListing = () => {
                     onChange={handleImageChange}
                   />
                 </label>
-                <div className={styles.imagePreview}></div>
+                  <div className={styles.imageNameContainer}>
                  {imageName && <p className={styles.fileName}>{imageName}</p>}
+                 </div>
               </div>
 
               <div className={styles.lowerButtonContainer}>
