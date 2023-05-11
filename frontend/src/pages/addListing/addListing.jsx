@@ -13,6 +13,7 @@ const AddListing = () => {
   const [description, setDescription] = useState("");
   const [loading, setLoading] = useState(false);
   const [loadingPrompt, setLoadingPrompt] = useState(null);
+  const [imageName, setImageName] = useState("");
  
    if (!jwtToken) {
     window.location.href = "/login";
@@ -21,30 +22,7 @@ const AddListing = () => {
 
   function handleImageChange(event) {
     const file = event.target.files[0];
-    setSelectedImage(file);
-    const preview = document.querySelector(`.${styles.imagePreview}`);
-    preview.innerHTML = "";
-    if (file) {
-      const fileName = document.createElement("p");
-      fileName.textContent = `Tiedosto valittu: ${file.name}`;
-      fileName.style.fontSize = "12px";
-      fileName.style.width = "100%";
-      fileName.style.textAlign = "left";
-      fileName.style.margin = "2px";
-      preview.appendChild(fileName);
-      if (file.type.includes("image/")) {
-        const reader = new FileReader();
-        reader.addEventListener("load", function () {
-          const image = document.createElement("img");
-          image.src = reader.result;
-          preview.appendChild(image);
-          preview.style.display = "block";
-        });
-        reader.readAsDataURL(file);
-      }
-    } else {
-      preview.style.display = "none";
-    }
+    setImageName(file.name);
   }
 
   const addInputFieldListener = () => {
@@ -232,6 +210,7 @@ const AddListing = () => {
                   />
                 </label>
                 <div className={styles.imagePreview}></div>
+                 {imageName && <p className={styles.fileName}>{imageName}</p>}
               </div>
 
               <div className={styles.lowerButtonContainer}>
