@@ -27,7 +27,7 @@ public class SalesListingService {
   private final UserDTOMapper userDTOMapper;
   private final SalesListingRepository salesListingRepository;
   private final ResourceLoader resourceLoader;
-  private static String FOLDERNAME = "/var/images/"; //PLACE TO STORE THE IMAGES
+  private static String FOLDERNAME = "/var/images/"; // DEFAULT PLACE TO STORE THE IMAGES
   @Autowired
   public SalesListingService(SalesListingRepository salesListingRepository,
                              ChatMessageService chatMessageService,
