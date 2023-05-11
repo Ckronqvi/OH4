@@ -22,6 +22,7 @@ const AddListing = () => {
 
   function handleImageChange(event) {
     const file = event.target.files[0];
+    setSelectedImage(file);
     setImageName(file.name);
   }
 
@@ -40,7 +41,7 @@ const AddListing = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!productName || !category || !location || !price || !condition) {
+    if (!productName || !category || !location || !price || !condition ||!selectedImage) {
       alert("Täytä kaikki kohdat!");
       return;
     }
