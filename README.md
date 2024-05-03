@@ -1,5 +1,5 @@
 # OH4
-Reactilla ja Springillä tehty verkkokauppa.
+Reactilla ja Spring-bootilla tehty verkkokauppa.
 
 ## Ominaisuudet:
 * Käyttäjätilin luominen
